@@ -1,28 +1,59 @@
-.App {
-  text-align: center;
+.attract{
+    background:#e74c3c;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+form{
+    width:260px;
+    height:260px;
+    margin:0 auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+input[type="range"]{
+    -webkit-appearance:none;
+    width:160px;
+    height:20px;
+    margin:10px 50px;
+    background: linear-gradient(to right, #9A2720 0%, #9A2720 100%);
+    background-size:150px 10px;
+    background-position:center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+    outline: none;
 }
 
-.App-title {
-  font-size: 1.5em;
+input[type=range]::-moz-range-track {
+    visibility: hidden;
 }
 
-.App-intro {
-  font-size: large;
+
+input[type=range]::-moz-range-thumb  {
+    width:20px;
+    height:20px;
+    background:#F26B5E;
+    position:relative;
+    z-index:3;
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    background:#F26B5E;
+    position:relative;
+    z-index:3;
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 0;
+}
+
+p{
+    width:100%;
+    text-align:center;
+    color:white;
+    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Roboto, Arial, Sans-serif, serif;
+    font-size:20px;
+    margin-top:30px;
 }
