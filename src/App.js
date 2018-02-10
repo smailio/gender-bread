@@ -4,15 +4,70 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div style={{ background: '#e74c3c' }}>
-        <form>
+      <div
+        style={{
+          // height: '100vh',
+          padding: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          background: '#e74c3c'
+        }}
+      >
+        <div>
           <p>Sexually attracted to</p>
-          <input type="range" defaultValue="50" />
-          <input type="range" defaultValue="0" />
-          <p>Romantically attracted to</p>
-          <input type="range" defaultValue="0" />
-          <input type="range" defaultValue="0" />
-        </form>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <input type="range" defaultValue="50" />
+          </div>
+
+          <div className="range-label">Men / Males / Masculinity</div>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <input type="range" defaultValue="50" />
+          </div>
+          <div className="range-label">Women / Females / Femininity</div>
+        </div>
+        <p>Romantically attracted to</p>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <input type="range" defaultValue="0" />
+          </div>
+
+          <div className="range-label">Men / Males / Masculinity</div>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <input type="range" defaultValue="50" />
+          </div>
+          <div className="range-label">Women / Females / Femininity</div>
+        </div>
       </div>
     );
   }
