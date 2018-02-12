@@ -1,4 +1,5 @@
 import React from 'react';
+import FlatRange from './FlatRange';
 
 export default ({}) => (
   <div
@@ -22,7 +23,7 @@ export default ({}) => (
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <input type="range" defaultValue="50" />
+        <FlatRange />
       </div>
 
       <div className="range-label">Men / Males / Masculinity</div>
@@ -35,7 +36,7 @@ export default ({}) => (
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <input type="range" defaultValue="50" />
+        <FlatRange />
       </div>
       <div className="range-label">Women / Females / Femininity</div>
     </div>
@@ -48,7 +49,7 @@ export default ({}) => (
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <input type="range" defaultValue="0" />
+        <FlatRange />
       </div>
 
       <div className="range-label">Men / Males / Masculinity</div>
@@ -61,7 +62,7 @@ export default ({}) => (
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <input type="range" defaultValue="50" />
+        <FlatRange />
       </div>
       <div className="range-label">Women / Females / Femininity</div>
     </div>

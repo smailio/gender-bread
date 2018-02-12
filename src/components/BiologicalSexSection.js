@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import FlatRange from './FlatRange';
 
 export default ({}) => (
   <div
@@ -23,16 +23,7 @@ export default ({}) => (
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <input
-          style={{
-            background: 'linear-gradient(to right, #674172 0%, #674172 100%)',
-            backgroundSize: '98% 10px',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-          type="range"
-          defaultValue="50"
-        />
+        <FlatRange />
       </div>
 
       <div className="range-label">Female-ness</div>
@@ -44,16 +35,7 @@ export default ({}) => (
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <input
-            style={{
-              background: 'linear-gradient(to right, #674172 0%, #674172 100%)',
-              backgroundSize: '98% 10px',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-            type="range"
-            defaultValue="50"
-          />
+          <FlatRange />
         </div>
         <div className="range-label">Male-ness</div>
       </div>
