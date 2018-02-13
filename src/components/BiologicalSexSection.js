@@ -22,7 +22,12 @@ export default props => (
           <FlatRange />
         </div>
 
-        <div className="range-label">Female-ness</div>
+        <div
+          className="range-label"
+          style={{ marginTop: -5, marginBottom: 10 }}
+        >
+          Female-ness
+        </div>
         <div
           style={{
             display: 'flex',
@@ -33,7 +38,12 @@ export default props => (
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <FlatRange />
           </div>
-          <div className="range-label">Male-ness</div>
+          <div
+            className="range-label"
+            style={{ marginTop: -5, marginBottom: 10 }}
+          >
+            Male-ness
+          </div>
         </div>
       </div>
     </Section>

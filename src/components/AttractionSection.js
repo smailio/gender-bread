@@ -22,7 +22,12 @@ export default props => (
           <FlatRange />
         </div>
 
-        <div className="range-label">Men / Males / Masculinity</div>
+        <div
+          className="range-label"
+          style={{ marginTop: -5, marginBottom: 10 }}
+        >
+          Men / Males / Masculinity
+        </div>
       </div>
       <div
         style={{
@@ -34,7 +39,12 @@ export default props => (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <FlatRange />
         </div>
-        <div className="range-label">Women / Females / Femininity</div>
+        <div
+          className="range-label"
+          style={{ marginTop: -5, marginBottom: 10 }}
+        >
+          Women / Females / Femininity
+        </div>
       </div>
       <p>Romantically attracted to</p>
       <div
@@ -48,7 +58,12 @@ export default props => (
           <FlatRange />
         </div>
 
-        <div className="range-label">Men / Males / Masculinity</div>
+        <div
+          className="range-label"
+          style={{ marginTop: -5, marginBottom: 10 }}
+        >
+          Men / Males / Masculinity
+        </div>
       </div>
       <div
         style={{
@@ -60,7 +75,12 @@ export default props => (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <FlatRange />
         </div>
-        <div className="range-label">Women / Females / Femininity</div>
+        <div
+          className="range-label"
+          style={{ marginTop: -5, marginBottom: 10 }}
+        >
+          Women / Females / Femininity
+        </div>
       </div>
     </Section>
   </ThemeProvider>
