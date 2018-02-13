@@ -5,7 +5,12 @@ import './App.css';
 
 class App extends Component {
   render() {
-    return [<BiologicalSexSection />, <AttractionSection />];
+    return (
+      <div>
+        <BiologicalSexSection />
+        <AttractionSection />
+      </div>
+    );
   }
 }
 

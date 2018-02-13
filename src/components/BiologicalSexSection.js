@@ -1,32 +1,16 @@
 import React from 'react';
 import FlatRange from './FlatRange';
+import { ThemeProvider } from 'styled-components';
+import Section from './Section';
+import { purple } from '../themes';
 
-export default ({}) => (
-  <div
-    style={{
-      // height: '100vh',
-      padding: 8,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      background: '#8E44AD'
-    }}
-  >
-    <div>
-      <p>Sexually attracted to</p>
-    </div>
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-      }}
-    >
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <FlatRange />
+// noinspection JSUnusedLocalSymbols
+export default props => (
+  <ThemeProvider theme={purple}>
+    <Section>
+      <div>
+        <p>Sexually attracted to</p>
       </div>
-
-      <div className="range-label">Female-ness</div>
       <div
         style={{
           display: 'flex',
@@ -37,8 +21,21 @@ export default ({}) => (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <FlatRange />
         </div>
-        <div className="range-label">Male-ness</div>
+
+        <div className="range-label">Female-ness</div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <FlatRange />
+          </div>
+          <div className="range-label">Male-ness</div>
+        </div>
       </div>
-    </div>
-  </div>
+    </Section>
+  </ThemeProvider>
 );

@@ -10,8 +10,12 @@ const Wrapper = styled.div`
     width: 98%;
     height: 20px;
     margin: 4px 10px;
-    background: linear-gradient(to right, #9a2720 0%, #9a2720 100%) no-repeat
-      center;
+    background: linear-gradient(
+        to right,
+        ${props => props.theme.slider} 0%,
+        ${props => props.theme.slider} 100%
+      )
+      no-repeat center;
     background-size: 98% 10px;
     overflow: hidden;
     outline: none;
@@ -24,7 +28,7 @@ const Wrapper = styled.div`
   input[type='range']::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #f26b5e;
+    background: ${props => props.theme.thumb};
     position: relative;
     z-index: 3;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -36,7 +40,7 @@ const Wrapper = styled.div`
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background: #f26b5e;
+    background: ${props => props.theme.thumb};
     position: relative;
     z-index: 3;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
@@ -45,7 +49,8 @@ const Wrapper = styled.div`
   }
 `;
 
-export default ({}) => (
+// noinspection JSUnusedLocalSymbols
+export default props => (
   <Wrapper>
     <input type="range" defaultValue={40} />
   </Wrapper>
