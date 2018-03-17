@@ -50,8 +50,17 @@ const Wrapper = styled.div`
 `;
 
 // noinspection JSUnusedLocalSymbols
-export default props => (
+const Range = ({ value = 35, ...props }) => (
   <Wrapper>
-    <input type="range" defaultValue={40} />
+    <input type="range" value={value} {...props} />
   </Wrapper>
 );
+
+const RangeBottomLabel = ({ label, value, onChange }) => (
+  <React.Fragment>
+    <Range value={value} onChange={onChange} />
+    <div className="range-label">{label}</div>
+  </React.Fragment>
+);
+
+export { RangeBottomLabel };

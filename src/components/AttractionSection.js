@@ -1,87 +1,75 @@
 import React from 'react';
-import FlatRange from './FlatRange';
+import { RangeBottomLabel as Range } from './FlatRange';
 import { red } from '../themes';
 import { ThemeProvider } from 'styled-components';
 import Section from './Section';
+import { StoreConsumer } from '../context/Store';
+import { Column } from './Grid.js';
 
 // noinspection JSUnusedLocalSymbols
 export default props => (
-  <ThemeProvider theme={red}>
-    <Section>
-      <div>
-        <p>Sexually attracted to</p>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <FlatRange />
-        </div>
-
-        <div
-          className="range-label"
-          style={{ marginTop: -5, marginBottom: 10 }}
-        >
-          Men / Males / Masculinity
-        </div>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <FlatRange />
-        </div>
-        <div
-          className="range-label"
-          style={{ marginTop: -5, marginBottom: 10 }}
-        >
-          Women / Females / Femininity
-        </div>
-      </div>
-      <p>Romantically attracted to</p>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <FlatRange />
-        </div>
-
-        <div
-          className="range-label"
-          style={{ marginTop: -5, marginBottom: 10 }}
-        >
-          Men / Males / Masculinity
-        </div>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <FlatRange />
-        </div>
-        <div
-          className="range-label"
-          style={{ marginTop: -5, marginBottom: 10 }}
-        >
-          Women / Females / Femininity
-        </div>
-      </div>
-    </Section>
-  </ThemeProvider>
+  <StoreConsumer>
+    {({ state, setState }) => (
+      <ThemeProvider theme={red}>
+        <Section>
+          <Column>
+            <p>Sexually attracted to</p>
+            <Range
+              value={state.sexualAttraction.m}
+              onChange={e =>
+                setState({
+                  ...state,
+                  sexualAttraction: {
+                    ...state.sexualAttraction,
+                    m: e.target.value
+                  }
+                })
+              }
+              label="Men / Males / Masculinity"
+            />
+            <Range
+              value={state.sexualAttraction.f}
+              onChange={e =>
+                setState({
+                  ...state,
+                  sexualAttraction: {
+                    ...state.sexualAttraction,
+                    f: e.target.value
+                  }
+                })
+              }
+              label="Women / Females / Femininity"
+            />
+            <p>Romantically attracted to</p>
+            <Range
+              value={state.romanticAttraction.m}
+              onChange={e =>
+                setState({
+                  ...state,
+                  romanticAttraction: {
+                    ...state.romanticAttraction,
+                    m: e.target.value
+                  }
+                })
+              }
+              label="Men / Males / Masculinity"
+            />
+            <Range
+              value={state.romanticAttraction.f}
+              onChange={e =>
+                setState({
+                  ...state,
+                  romanticAttraction: {
+                    ...state.romanticAttraction,
+                    f: e.target.value
+                  }
+                })
+              }
+              label="Women / Females / Femininity"
+            />
+          </Column>
+        </Section>
+      </ThemeProvider>
+    )}
+  </StoreConsumer>
 );

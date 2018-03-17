@@ -1,53 +1,62 @@
 import React from 'react';
-import FlatRange from './FlatRange';
-import styled, { ThemeProvider } from 'styled-components';
+import { RangeBottomLabel as Range } from './FlatRange';
 import Section from './Section';
 import { purple } from '../themes';
 import Button from './Button';
+import { StoreConsumer } from '../context/Store';
+import { Row, Column } from './Grid.js';
+import { ThemeProvider } from 'styled-components';
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
 // noinspection JSUnusedLocalSymbols
 export default props => (
-  <ThemeProvider theme={purple}>
-    <Section>
-      <div>
-        <p>Sexually attracted to</p>
-      </div>
-      <Column>
-        <FlatRange />
-        <div
-          className="range-label"
-          style={{ marginTop: -5, marginBottom: 10 }}
-        >
-          Female-ness
-        </div>
-        <Column>
-          <Column>
-            <FlatRange />
-          </Column>
-          <div
-            className="range-label"
-            style={{ marginTop: -5, marginBottom: 10 }}
-          >
-            Male-ness
+  <StoreConsumer>
+    {({ state, setState }) => (
+      <ThemeProvider theme={purple}>
+        <Section>
+          <div>
+            <p>Biological sex</p>
           </div>
-        </Column>
-        <Row>
-          <Button>male</Button>
-          <Button>female</Button>
-          <Button>intersex</Button>
-          <Button>Female self ID</Button>
-        </Row>
-      </Column>
-    </Section>
-  </ThemeProvider>
+          <Column>
+            <Range
+              value={state.bioSex.f}
+              onChange={e =>
+                setState({
+                  ...state,
+                  bioSex: { ...state.bioSex, f: e.target.value }
+                })
+              }
+              label="Female-ness"
+            />
+            <Range
+              value={state.bioSex.m}
+              onChange={e =>
+                setState({
+                  ...state,
+                  bioSex: { ...state.bioSex, m: e.target.value }
+                })
+              }
+              label="Male-ness"
+            />
+            <Row>
+              <Button onClick={() => setState({ bioSex: { f: 10, m: 99 } })}>
+                Male
+              </Button>
+              <Button onClick={() => setState({ bioSex: { f: 99, m: 10 } })}>
+                Female
+              </Button>
+              <Button onClick={() => setState({ bioSex: { f: 50, m: 50 } })}>
+                Intersex
+              </Button>
+              <Button onClick={() => setState({ bioSex: { f: 35, m: 80 } })}>
+                FtM Male
+              </Button>
+              <Button onClick={() => setState({ bioSex: { f: 80, m: 35 } })}>
+                MtF Female
+              </Button>
+            </Row>
+          </Column>
+        </Section>
+      </ThemeProvider>
+    )}
+  </StoreConsumer>
 );
