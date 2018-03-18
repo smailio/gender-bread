@@ -11,4 +11,10 @@ const Row = styled.div`
   justify-content: center;
 `;
 
-export { Column, Row };
+const DesktopOnly = styled.div`
+  @media (max-width: 800px) {
+    display: none;
+  }
+`;
+
+export { Column, Row, DesktopOnly };

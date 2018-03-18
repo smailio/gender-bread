@@ -4,7 +4,7 @@ import Section from './Section';
 import { purple } from '../themes';
 import Button from './Button';
 import { StoreConsumer } from '../context/Store';
-import { Row, Column } from './Grid.js';
+import { Row, Column, DesktopOnly } from './Grid.js';
 import { ThemeProvider } from 'styled-components';
 
 // noinspection JSUnusedLocalSymbols
@@ -47,12 +47,14 @@ export default props => (
               <Button onClick={() => setState({ bioSex: { f: 50, m: 50 } })}>
                 Intersex
               </Button>
-              <Button onClick={() => setState({ bioSex: { f: 35, m: 80 } })}>
-                FtM Male
-              </Button>
-              <Button onClick={() => setState({ bioSex: { f: 80, m: 35 } })}>
-                MtF Female
-              </Button>
+              <DesktopOnly>
+                <Button onClick={() => setState({ bioSex: { f: 35, m: 80 } })}>
+                  FtM Male
+                </Button>
+                <Button onClick={() => setState({ bioSex: { f: 80, m: 35 } })}>
+                  MtF Female
+                </Button>
+              </DesktopOnly>
             </Row>
           </Column>
         </Section>
