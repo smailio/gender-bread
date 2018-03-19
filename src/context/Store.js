@@ -6,6 +6,8 @@ export class StoreProvider extends Component {
   state = {
     bioSex: { f: 20, m: 90 },
     sexualAttraction: { f: 0, m: 0 },
+    genderExpression: { f: 0, m: 0 },
+    genderIdentity: { f: 0, m: 0 },
     romanticAttraction: { f: 0, m: 0 }
   };
   render() {
