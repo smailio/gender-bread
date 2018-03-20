@@ -4,7 +4,7 @@ import Section from './Section';
 import { blue } from '../themes';
 import Button from './Button';
 import { StoreConsumer } from '../context/Store';
-import { Row, Column, DesktopOnly } from './Grid.js';
+import { Row, Column, DesktopOnly,Title } from './Grid.js';
 import { ThemeProvider } from 'styled-components';
 
 // noinspection JSUnusedLocalSymbols
@@ -14,7 +14,7 @@ export default props => (
       <ThemeProvider theme={blue}>
         <Section>
           <div>
-            <p>Gender expression</p>
+            <Title>Gender expression</Title>
           </div>
           <Column>
             <Range

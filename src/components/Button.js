@@ -9,7 +9,7 @@ const Button = styled.button`
   width: 120px;
   /* Color the border and text with theme.main */
   color: ${props => props.theme.main};
-  border: 2px solid ${props => props.theme.main};
+  border: 2px solid ${props => props.theme.background};
   background-color: white;
   cursor: pointer;
 `;

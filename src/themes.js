@@ -13,9 +13,9 @@ export const purple = {
 };
 
 export const yellow = {
-  main: '#F9BF3B',
-  background: '#F9BF3B',
-  slider: '#FDE3A7',
+  main: '#dbbb38',
+  background: '#F4D03F',
+  slider: '#F9BF3B',
   thumb: '#F5D76E'
 };
 

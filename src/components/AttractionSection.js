@@ -4,7 +4,7 @@ import { red } from '../themes';
 import { ThemeProvider } from 'styled-components';
 import Section from './Section';
 import { StoreConsumer } from '../context/Store';
-import { Column } from './Grid.js';
+import { Column, Title } from './Grid.js';
 
 // noinspection JSUnusedLocalSymbols
 export default props => (
@@ -13,7 +13,7 @@ export default props => (
       <ThemeProvider theme={red}>
         <Section>
           <Column>
-            <p>Sexually attracted to</p>
+            <Title>Sexually attracted to</Title>
             <Range
               value={state.sexualAttraction.m}
               onChange={e =>
@@ -40,7 +40,7 @@ export default props => (
               }
               label="Women / Females / Femininity"
             />
-            <p>Romantically attracted to</p>
+            <Title>Romantically attracted to</Title>
             <Range
               value={state.romanticAttraction.m}
               onChange={e =>

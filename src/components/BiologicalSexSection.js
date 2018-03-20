@@ -4,7 +4,7 @@ import Section from './Section';
 import { purple } from '../themes';
 import Button from './Button';
 import { StoreConsumer } from '../context/Store';
-import { Row, Column, DesktopOnly } from './Grid.js';
+import { Row, Column, DesktopOnly, Title } from './Grid.js';
 import { ThemeProvider } from 'styled-components';
 
 // noinspection JSUnusedLocalSymbols
@@ -14,7 +14,7 @@ export default props => (
       <ThemeProvider theme={purple}>
         <Section>
           <div>
-            <p>Biological sex</p>
+            <Title>Biological sex</Title>
           </div>
           <Column>
             <Range

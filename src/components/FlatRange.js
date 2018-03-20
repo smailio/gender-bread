@@ -49,6 +49,15 @@ const Wrapper = styled.div`
   }
 `;
 
+const RangeLabel = styled.div`
+  //height: 20px;
+  //line-height: 100%;
+  font-size: 16px;
+  color: ${props => props.theme.main};
+  text-align: center;
+  padding: 4px 0 8px 0;
+  font-family: Roboto, Arial, Sans-serif, serif;
+`;
 // noinspection JSUnusedLocalSymbols
 const Range = ({ value = 35, ...props }) => (
   <Wrapper>
@@ -59,7 +68,7 @@ const Range = ({ value = 35, ...props }) => (
 const RangeBottomLabel = ({ label, value, onChange }) => (
   <React.Fragment>
     <Range value={value} onChange={onChange} />
-    <div className="range-label">{label}</div>
+    <RangeLabel>{label}</RangeLabel>
   </React.Fragment>
 );
 
