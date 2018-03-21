@@ -7,7 +7,7 @@ const Section = styled.div`
   justify-content: center;
   // background-color: ${props => props.theme.background};
   color: ${props => props.theme.main};
-  border-left: 15px solid ${props => props.theme.background};
+  border-left: 0.8em solid ${props => props.theme.background};
 `;
 
 export default Section;

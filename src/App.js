@@ -3,6 +3,7 @@ import AttractionSection from './components/AttractionSection';
 import BiologicalSexSection from './components/BiologicalSexSection';
 import GenderExpressionSection from './components/GenderExpression';
 import GenderIdentitySection from './components/GenderIdentitySection';
+import NameSection from './components/NameSection';
 import './App.css';
 import { StoreProvider } from './context/Store';
 
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <StoreProvider>
         <div>
+          <NameSection />
           <GenderIdentitySection />
           <GenderExpressionSection />
           <BiologicalSexSection />

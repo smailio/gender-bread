@@ -52,7 +52,7 @@ const Wrapper = styled.div`
 const RangeLabel = styled.div`
   //height: 20px;
   //line-height: 100%;
-  font-size: 16px;
+  font-size: 0.8em;
   color: ${props => props.theme.main};
   text-align: center;
   padding: 4px 0 8px 0;

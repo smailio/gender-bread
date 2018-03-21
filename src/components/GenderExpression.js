@@ -53,11 +53,11 @@ export default props => (
               >
                 Femme
               </Button>
-              <Button
-                onClick={() => setState({ genderIdentity: { f: 50, m: 50 } })}
-              >
-                Androgynous
-              </Button>
+                <Button
+                  onClick={() => setState({ genderIdentity: { f: 50, m: 50 } })}
+                >
+                  Androgynous
+                </Button>
               <DesktopOnly>
                 <Button
                   onClick={() => setState({ genderIdentity: { f: 35, m: 80 } })}
